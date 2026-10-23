@@ -1,0 +1,64 @@
+---
+title: "Synthetic Sales Analysis - Script Documentation"
+author: "Navjot Singh"
+date: "2026-10-23"
+output: html_document
+---
+
+# AI Assistance Declaration
+
+AI Assistance Declaration: I used ChatGPT (OpenAI, GPT-5.6 Sol, October 23, 2026) for documentation structure, wording, Markdown formatting suggestions, and example code-block formatting. Prompts used are recorded in `Appendix_AI_Use.md`. I verified outputs using RStudio/Posit Cloud preview, direct R execution, an independent cross-check, and a self spot-check. All final calculations are done by myself. I am responsible for the accuracy and originality of this work.
+
+# Purpose
+
+This document explains the purpose and workflow of `analysis.R`. The script demonstrates a small data-analysis workflow using a synthetic sales dataset. It imports the data, inspects its structure, summarizes the variables, and creates a regional sales summary.
+
+## Inputs
+
+The script uses one input file:
+
+- `data/synthetic_sales.csv`
+
+The synthetic dataset contains `order_id`, `region`, `product`, `units`, and `sales`. No real or personal data is used.
+
+## Import Data
+
+```{r import-data}
+sales <- read.csv("data/synthetic_sales.csv")
+```
+
+## Inspect Data
+
+```{r inspect-data}
+head(sales)
+str(sales)
+summary(sales)
+```
+
+These checks confirm that the file loads correctly and show the structure and basic summary of the synthetic dataset.
+
+## Create Regional Sales Summary
+
+```{r grouped-summary}
+region_sales <- aggregate(sales ~ region, data = sales, FUN = sum)
+region_sales
+```
+
+This step groups the records by region and calculates the total synthetic sales for each region.
+
+## Outputs
+
+When the document is knitted, it produces:
+
+1. a preview of the imported dataset;
+2. column names and data types;
+3. summary statistics; and
+4. a table of total synthetic sales by region.
+
+## Verification
+
+The final submission should be checked by knitting this file in RStudio or Posit Cloud, confirming that all chunks execute, independently cross-checking the grouped totals, and spot-checking selected CSV rows against the imported data.
+
+## AI Assistance Disclosure
+
+ChatGPT was used to suggest the documentation layout, headings, wording, and R Markdown formatting. The prompt record is included in `Appendix_AI_Use.md`. AI suggestions were reviewed against the assignment requirements and the final code/output must be validated directly in R before submission.

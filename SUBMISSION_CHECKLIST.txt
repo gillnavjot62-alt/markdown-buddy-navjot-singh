@@ -1,0 +1,14 @@
+BDA400 Assignment 1 - Final Submission Checklist
+Student: Navjot Singh
+Repository name: markdown-buddy-navjot-singh
+
+Required final student actions:
+[ ] Open analysis_documentation.Rmd in RStudio or Posit Cloud and click Knit.
+[ ] Confirm every R chunk runs without error.
+[ ] Preview README.md and confirm headings, lists, and code blocks render correctly.
+[ ] Independently cross-check the regional sales totals.
+[ ] Spot-check selected CSV rows against the imported R data.
+[ ] Create/upload the files to GitHub repository: markdown-buddy-navjot-singh
+[ ] Confirm README.md, analysis_documentation.Rmd, Reflection.md, and Appendix_AI_Use.md are visible.
+[ ] If the LMS gives exact Reflection Questions, replace the three draft question headings with the exact wording.
+[ ] Submit the required repository/file through the LMS.
